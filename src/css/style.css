@@ -1,0 +1,245 @@
+/* CSS Document */
+body {
+  margin-left: 0px;
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+}
+
+#container {
+  position: relative;
+  width: 415px;
+  height: 120px;
+  overflow: hidden;
+  border: 0px solid #EFEFEF;
+}
+
+#scroller {
+  width: 1000px; /* = width + margin left + margin right + padding*2 + border*2  from the content rule */
+}
+
+.content {
+  width: 96px;
+  height: 105px;
+  float: left;
+  margin-left: 2px;
+  margin-right: 2px;
+  padding: 1px;
+  border: 0px solid #FFEEC5;
+  font-size: .8em;
+}
+
+.scrollNav, .scrollNav a:link, .scrollNav a:visited {
+  font-size: .8em;
+  color: #000000;
+  font-weight: bold;
+}
+
+
+<!-- [if IE] >
+
+
+#scroller {
+  width: 882px; /* = width + margin left + margin right from the content rule + border*2 from the container rule*/
+}
+
+.top_head {
+  font-family: Tahoma;
+  font-size: 12px;
+  color: #a8b1b3;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.contain_sub {
+  font-family: Tahoma;
+  font-size: 11px;
+  color: #a8b1b3;
+  text-align: justify;
+}
+
+.main_contain {
+  font-family: Tahoma;
+  font-size: 11px;
+  color: #a8b1b3;
+  line-height: 15.5px;
+}
+
+.readmore {
+  font-family: Tahoma;
+  font-size: 11px;
+  color: #12c1f7;
+  text-transform: uppercase;
+}
+
+a.readmore {
+  font-family: Tahoma;
+  font-size: 11px;
+  color: #12c1f7;
+  text-transform: uppercase;
+  text-decoration: underline;
+}
+
+  a.readmore:hover {
+    font-family: Tahoma;
+    font-size: 11px;
+    color: #a8b1b3;
+    text-transform: uppercase;
+    text-decoration: underline;
+  }
+
+.readmore1 {
+  font-family: Tahoma;
+  font-size: 11px;
+  color: #12c1f7;
+}
+
+a.readmore1 {
+  font-family: Tahoma;
+  font-size: 11px;
+  color: #12c1f7;
+  text-decoration: none;
+}
+
+  a.readmore1:hover {
+    font-family: Tahoma;
+    font-size: 11px;
+    color: #a8b1b3;
+    text-decoration: none;
+  }
+
+.border_curve {
+  border-top: 1px solid #a7b0b2;
+  border-bottom: 1px solid #a7b0b2;
+}
+
+.footer {
+  font-family: Tahoma;
+  font-size: 11px;
+  color: #464b4c;
+}
+
+a.footer {
+  font-family: Tahoma;
+  font-size: 11px;
+  color: #464b4c;
+  text-decoration: none;
+}
+
+  a.footer:hover {
+    font-family: Tahoma;
+    font-size: 11px;
+    color: #12c1f7;
+    text-decoration: none;
+  }
+
+.footer1 {
+  font-family: Tahoma;
+  font-size: 11px;
+  color: #000000;
+}
+
+a.footer1 {
+  font-family: Tahoma;
+  font-size: 11px;
+  color: #000000;
+  text-decoration: none;
+}
+
+  a.footer1:hover {
+    font-family: Tahoma;
+    font-size: 11px;
+    color: #BB0000;
+    text-decoration: none;
+  }
+
+.border {
+  border-right: 1px solid #DFDFDF;
+}
+
+.photo_border {
+  border: 1px solid #D6D6D6;
+}
+
+.artgallery_head {
+  font-family: Tahoma;
+  font-size: 11px;
+  color: #161919;
+  font-weight: bold;
+}
+
+.artgallery_content {
+  font-family: Tahoma;
+  font-size: 11px;
+  color: #161919;
+}
+
+.artgallery_click {
+  font-family: Tahoma;
+  font-size: 10px;
+  color: #161919;
+}
+
+.numbering {
+  font-family: Tahoma;
+  font-size: 11px;
+  color: #000000;
+}
+
+  .numbering span {
+    font-family: Tahoma;
+    font-size: 11px;
+    color: #BB0000;
+    text-decoration: none;
+  }
+
+    .numbering span a {
+      font-family: Tahoma;
+      font-size: 11px;
+      color: #BB0000;
+      text-decoration: none;
+    }
+
+    .numbering span b {
+      font-family: Tahoma;
+      font-size: 11px;
+      color: #000000;
+      text-decoration: none;
+    }
+
+a.numbering:hover {
+  font-family: Tahoma;
+  font-size: 11px;
+  color: #BB0000;
+  text-decoration: none;
+}
+
+.artgallery_navigator {
+  font-family: verdana;
+  font-size: 11px;
+  color: #666666;
+  font-weight: bold;
+}
+
+a.artgallery_navigator {
+  font-family: verdana;
+  font-size: 11px;
+  color: #666666;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+  a.artgallery_navigator:hover {
+    font-family: verdana;
+    font-size: 11px;
+    color: #BB0000;
+    font-weight: bold;
+    text-decoration: none;
+  }
+
+.message {
+  color: Red;
+  font-size: 11px;
+  padding: 5px;
+  font-family: Tahoma;
+}

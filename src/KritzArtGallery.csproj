@@ -1,0 +1,301 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="12.0">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{13CD7F53-8AF3-4FFE-99A9-6693EAF2223C}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>KritzArtGallery</RootNamespace>
+    <AssemblyName>KritzArtGallery</AssemblyName>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <UseIISExpress>false</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CollectionPager, Version=0.0.0.0, Culture=neutral" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="admArtGallery.aspx" />
+    <Content Include="admLogin.aspx" />
+    <Content Include="admArtDetails.aspx" />
+    <Content Include="artDetails.aspx" />
+    <Content Include="artGallery.aspx" />
+    <Content Include="css\lightbox.css" />
+    <Content Include="css\style.css" />
+    <Content Include="index2.aspx" />
+    <Content Include="js\closelabel.gif" />
+    <Content Include="js\effects.js" />
+    <Content Include="js\lightbox.js" />
+    <Content Include="js\loading.gif" />
+    <Content Include="js\prototype.js" />
+    <Content Include="js\scriptaculous.js" />
+    <Content Include="js\scrollDiv.js" />
+    <Content Include="Scripts\AC_RunActiveContent.js" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="aboutUs.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>aboutUs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="aboutUs.aspx.designer.cs">
+      <DependentUpon>aboutUs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admArtGallery.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>admArtGallery.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admArtGallery.aspx.designer.cs">
+      <DependentUpon>admArtGallery.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdmLogin.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>admLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdmLogin.aspx.designer.cs">
+      <DependentUpon>admLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admArtDetails.aspx.cs">
+      <DependentUpon>admArtDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admArtDetails.aspx.designer.cs">
+      <DependentUpon>admArtDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="artDetails.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>artDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="artDetails.aspx.designer.cs">
+      <DependentUpon>artDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ArtGallery.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>artGallery.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ArtGallery.aspx.designer.cs">
+      <DependentUpon>artGallery.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="index.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="testpageUploadTest.aspx.cs">
+      <DependentUpon>testpageUploadTest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="testpageUploadTest.aspx.designer.cs">
+      <DependentUpon>testpageUploadTest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserArtGallery.Master.cs">
+      <DependentUpon>UserArtGallery.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserArtGallery.Master.designer.cs">
+      <DependentUpon>UserArtGallery.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Components\Common\AppException.cs" />
+    <Compile Include="Components\Common\AppLogger.cs" />
+    <Compile Include="Components\Common\CommonLib.cs" />
+    <Compile Include="Components\Common\Constants.cs" />
+    <Compile Include="Components\Core\BusinessObject.cs" />
+    <Compile Include="Components\Core\DataObjects.cs" />
+    <Compile Include="Components\Core\SQLHelper.cs" />
+    <Compile Include="Components\Data\ArtDetails.cs" />
+    <Compile Include="Components\Interface\IArtDetails.cs" />
+    <Compile Include="contactUs.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>contactUs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="contactUs.aspx.designer.cs">
+      <DependentUpon>contactUs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminArtGallery.Master.cs">
+      <DependentUpon>AdminArtGallery.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminArtGallery.Master.designer.cs">
+      <DependentUpon>AdminArtGallery.Master</DependentUpon>
+    </Compile>
+    <Compile Include="index2.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>index2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="index2.aspx.designer.cs">
+      <DependentUpon>index2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="aboutUs.aspx" />
+    <Content Include="UserArtGallery.Master" />
+    <Content Include="closelabel.gif" />
+    <Content Include="contactUs.aspx" />
+    <Content Include="images\about-us-main.jpg" />
+    <Content Include="images\about-us.jpg" />
+    <Content Include="images\abstract.jpg" />
+    <Content Include="images\abstract2.jpg" />
+    <Content Include="images\arrow.gif" />
+    <Content Include="images\arrow2.gif" />
+    <Content Include="images\arrow2.jpg" />
+    <Content Include="images\art-about-us-over.jpg" />
+    <Content Include="images\art-about-us.jpg" />
+    <Content Include="images\art-art-gallery-over.jpg" />
+    <Content Include="images\art-art-gallery.jpg" />
+    <Content Include="images\art-contact-us-over.jpg" />
+    <Content Include="images\art-contact-us.jpg" />
+    <Content Include="images\art-gallery.jpg" />
+    <Content Include="images\art-home-over.jpg" />
+    <Content Include="images\art-home.jpg" />
+    <Content Include="images\artifacts.jpg" />
+    <Content Include="images\artifacts2.jpg" />
+    <Content Include="images\back.JPG" />
+    <Content Include="images\bottom-blackcurve.jpg" />
+    <Content Include="images\btn_add_gallery.gif" />
+    <Content Include="images\btn_cart.gif" />
+    <Content Include="images\closelabel.gif" />
+    <Content Include="images\contact-us.jpg" />
+    <Content Include="images\delete.JPG" />
+    <Content Include="images\edit.JPG" />
+    <Content Include="images\email-to-friend.jpg" />
+    <Content Include="images\figurative.jpg" />
+    <Content Include="images\figurative2.jpg" />
+    <Content Include="images\home-top.jpg" />
+    <Content Include="images\home.gif" />
+    <Content Include="images\home.jpg" />
+    <Content Include="images\info.gif" />
+    <Content Include="images\landscape.jpg" />
+    <Content Include="images\landscape2.jpg" />
+    <Content Include="images\left-black-curve.jpg" />
+    <Content Include="images\left-cartain.jpg" />
+    <Content Include="images\left-cartain2.jpg" />
+    <Content Include="images\left-cartain3.jpg" />
+    <Content Include="images\loading.gif" />
+    <Content Include="images\logoart-new.jpg" />
+    <Content Include="images\logoart.jpg" />
+    <Content Include="images\logout.jpg" />
+    <Content Include="images\mail.gif" />
+    <Content Include="images\main-banner.jpg" />
+    <Content Include="images\main-banner.swf" />
+    <Content Include="images\middle-bg.jpg" />
+    <Content Include="images\nav-bot-bg.jpg" />
+    <Content Include="images\next-photo.jpg" />
+    <Content Include="images\phone.gif" />
+    <Content Include="images\privous.jpg" />
+    <Content Include="images\request-quate.jpg" />
+    <Content Include="images\right-black-curve.jpg" />
+    <Content Include="images\right-cartain.jpg" />
+    <Content Include="images\right-cartain2.jpg" />
+    <Content Include="images\right-cartian3.jpg" />
+    <Content Include="images\tellafriend.gif" />
+    <Content Include="images\top-banner2.jpg" />
+    <Content Include="images\top-bg.jpg" />
+    <Content Include="images\top-black-curve.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AdminArtGallery.Master" />
+    <Content Include="images\big-images\abstract.jpg" />
+    <Content Include="images\big-images\abstract2.jpg" />
+    <Content Include="images\big-images\artifacts.jpg" />
+    <Content Include="images\big-images\artifacts2.jpg" />
+    <Content Include="images\big-images\figurative.jpg" />
+    <Content Include="images\big-images\figurative2.jpg" />
+    <Content Include="images\big-images\landscape.jpg" />
+    <Content Include="images\big-images\landscape2.jpg" />
+    <Content Include="images\big-images\sample1.jpg" />
+    <Content Include="images\big-missing.JPG" />
+    <Content Include="images\search.jpg" />
+    <Content Include="images\small-missing.JPG" />
+    <Content Include="index.aspx" />
+    <Content Include="testpageUploadTest.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Components\Buisness\" />
+    <Folder Include="images\small-images\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>2251</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

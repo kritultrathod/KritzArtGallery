@@ -1,0 +1,8 @@
+﻿CREATE PROCEDURE GET_RECORDS @sSearch VARCHAR(100)
+AS
+SELECT *
+FROM ArtDetails
+WHERE Artist LIKE '%' + @sSearch + '%'
+ORDER BY Artist ASC
+
+SET ROWCOUNT 0
