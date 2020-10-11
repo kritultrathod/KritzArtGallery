@@ -56,8 +56,6 @@ namespace KritzArtGallery.Common
       {
         if (context != null)
           context = null;
-
-
       }
     }
   }

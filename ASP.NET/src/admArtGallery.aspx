@@ -1,5 +1,5 @@
 <%@ Page MasterPageFile="~/AdminArtGallery.Master" Language="C#" AutoEventWireup="true"
-  CodeBehind="admArtGallery.aspx.cs" Inherits="KritzArtGallery.admArtGallery" %>
+  CodeBehind="admArtGallery.aspx.cs" Inherits="KritzArtGallery.admArtGallery" EnableEventValidation="false" %>
 
 <%@ Register TagPrefix="cc1" Namespace="SiteUtils" Assembly="CollectionPager" %>
 <%--<script language="JavaScript">

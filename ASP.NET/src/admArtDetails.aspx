@@ -103,7 +103,7 @@
           </tr>
           <tr>
             <td colspan="3">
-              <span class="message">Please don�t check display price if Get Quote button has to be displayed at user end.</span>
+              <span class="message">Please don't check display price if Get Quote button has to be displayed at user end.</span>
             </td>
           </tr>
           <tr>

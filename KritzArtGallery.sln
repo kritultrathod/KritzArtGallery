@@ -3,11 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30523.141
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KritzArtGallery", "src\KritzArtGallery.csproj", "{13CD7F53-8AF3-4FFE-99A9-6693EAF2223C}"
-EndProject
 Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "database", "database\database.sqlproj", "{9A6323E4-F083-4172-92CC-918CBB7ADA1C}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KritzArtGalleryTests", "test\KritzArtGalleryTests.csproj", "{94CE13F4-27BD-4301-B7EC-5CFC63C59B5F}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{AC1D10E8-360B-42AA-B2E8-65500F4569FB}"
 	ProjectSection(SolutionItems) = preProject
@@ -19,32 +15,65 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "req", "req", "{52967E4D-2F9
 		docs\req\KritzArtGallery.xmind = docs\req\KritzArtGallery.xmind
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ASP.NET", "ASP.NET", "{1A51D47E-448F-4962-8A0F-45D083D4BFCC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Blazor", "Blazor", "{BAE58F0E-7AD1-4A73-A485-021447BF1147}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KritzArtGallery", "ASP.NET\src\KritzArtGallery.csproj", "{13CD7F53-8AF3-4FFE-99A9-6693EAF2223C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KritzArtGalleryTests", "ASP.NET\test\KritzArtGalleryTests.csproj", "{94CE13F4-27BD-4301-B7EC-5CFC63C59B5F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorArtGallery", "Blazor.NetCore\src\BlazorArtGallery\BlazorArtGallery.csproj", "{E2C8EA16-03B1-4479-B3CC-E1462F6DFE69}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorArtGalleryTests", "Blazor.NetCore\test\BlazorArtGalleryTests\BlazorArtGalleryTests.csproj", "{C4541F4B-B717-4545-A162-E0B93F577BE9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Library", "Library", "{E43E5E70-9F00-40E9-BFBE-6A2DE6B2539E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KritzArtGallery.Model", "Library\KritzArtGallery.Model\KritzArtGallery.Model.csproj", "{614C2BC3-1A57-4541-9607-8E6CEF7020D3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{13CD7F53-8AF3-4FFE-99A9-6693EAF2223C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{13CD7F53-8AF3-4FFE-99A9-6693EAF2223C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{13CD7F53-8AF3-4FFE-99A9-6693EAF2223C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{13CD7F53-8AF3-4FFE-99A9-6693EAF2223C}.Release|Any CPU.Build.0 = Release|Any CPU
 		{9A6323E4-F083-4172-92CC-918CBB7ADA1C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{9A6323E4-F083-4172-92CC-918CBB7ADA1C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9A6323E4-F083-4172-92CC-918CBB7ADA1C}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
 		{9A6323E4-F083-4172-92CC-918CBB7ADA1C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9A6323E4-F083-4172-92CC-918CBB7ADA1C}.Release|Any CPU.Build.0 = Release|Any CPU
 		{9A6323E4-F083-4172-92CC-918CBB7ADA1C}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{13CD7F53-8AF3-4FFE-99A9-6693EAF2223C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{13CD7F53-8AF3-4FFE-99A9-6693EAF2223C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{13CD7F53-8AF3-4FFE-99A9-6693EAF2223C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{13CD7F53-8AF3-4FFE-99A9-6693EAF2223C}.Release|Any CPU.Build.0 = Release|Any CPU
 		{94CE13F4-27BD-4301-B7EC-5CFC63C59B5F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{94CE13F4-27BD-4301-B7EC-5CFC63C59B5F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{94CE13F4-27BD-4301-B7EC-5CFC63C59B5F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{94CE13F4-27BD-4301-B7EC-5CFC63C59B5F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E2C8EA16-03B1-4479-B3CC-E1462F6DFE69}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E2C8EA16-03B1-4479-B3CC-E1462F6DFE69}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E2C8EA16-03B1-4479-B3CC-E1462F6DFE69}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E2C8EA16-03B1-4479-B3CC-E1462F6DFE69}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C4541F4B-B717-4545-A162-E0B93F577BE9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C4541F4B-B717-4545-A162-E0B93F577BE9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C4541F4B-B717-4545-A162-E0B93F577BE9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C4541F4B-B717-4545-A162-E0B93F577BE9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{614C2BC3-1A57-4541-9607-8E6CEF7020D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{614C2BC3-1A57-4541-9607-8E6CEF7020D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{614C2BC3-1A57-4541-9607-8E6CEF7020D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{614C2BC3-1A57-4541-9607-8E6CEF7020D3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{52967E4D-2F96-43CF-964A-0353392D6F1E} = {AC1D10E8-360B-42AA-B2E8-65500F4569FB}
+		{13CD7F53-8AF3-4FFE-99A9-6693EAF2223C} = {1A51D47E-448F-4962-8A0F-45D083D4BFCC}
+		{94CE13F4-27BD-4301-B7EC-5CFC63C59B5F} = {1A51D47E-448F-4962-8A0F-45D083D4BFCC}
+		{E2C8EA16-03B1-4479-B3CC-E1462F6DFE69} = {BAE58F0E-7AD1-4A73-A485-021447BF1147}
+		{C4541F4B-B717-4545-A162-E0B93F577BE9} = {BAE58F0E-7AD1-4A73-A485-021447BF1147}
+		{614C2BC3-1A57-4541-9607-8E6CEF7020D3} = {E43E5E70-9F00-40E9-BFBE-6A2DE6B2539E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2F887763-2094-408E-8F1E-B9B59F5ACC8D}

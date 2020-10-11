@@ -31,6 +31,7 @@ namespace KritzArtGallery
     {
       //Session["ssnSearch"] = null;
     }
+
     protected void repeaterDatabind(string sSearch)
     {
       CollectionPager1.DataSource = ArtDetails.getArtDetails(sSearch).DefaultView;
@@ -65,6 +66,7 @@ namespace KritzArtGallery
       lblPrice.Text = "Rs. " + string.Format("{0:##,###.##}", DataBinder.Eval(e.Item.DataItem, "Price"));
       //string.Format("{0:C}", DataBinder.Eval(e.Item.DataItem, "Price").ToString());
 
+      var test = DataBinder.Eval(e.Item.DataItem, "ImageSmall").ToString();
 
       bool boolPrice = bool.Parse(DataBinder.Eval(e.Item.DataItem, "Private").ToString());
       bool boolAvailable = bool.Parse(DataBinder.Eval(e.Item.DataItem, "Available").ToString());
