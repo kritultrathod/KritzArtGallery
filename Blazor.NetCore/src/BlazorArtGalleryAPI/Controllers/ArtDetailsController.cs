@@ -19,7 +19,7 @@ namespace BlazorArtGalleryAPI.Controllers
     {
       _ArtDetailRepository = artDetailRepository;
     }
-    
+
     [HttpGet]
     public async Task<ActionResult> GetArtDetails()
     {
@@ -31,6 +31,27 @@ namespace BlazorArtGalleryAPI.Controllers
       {
         LogException(e);
         return StatusCode(StatusCodes.Status500InternalServerError, "Error retrieving Art Details from database");
+      }
+    }
+
+    [HttpGet("{id}")]
+    public async Task<ActionResult<ArtDetail>> GetArtDetail(int id)
+    {
+      try
+      {
+        var result = await _ArtDetailRepository.GetArtDetail(id);
+
+        if (result == null)
+        {
+          return NotFound();
+        }
+
+        return result;
+      }
+      catch (Exception e)
+      {
+        LogException(e);
+        return StatusCode(StatusCodes.Status500InternalServerError, $@"Error retrieving Art Detail for id {id} from database");
       }
     }
 
