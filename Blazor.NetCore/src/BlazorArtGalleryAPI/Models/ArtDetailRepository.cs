@@ -62,14 +62,16 @@ namespace BlazorArtGalleryAPI.Models
     }
 
     //TODO: remove async void here, handle error
-    public async void DeleteArtDetail(int artDetailId)
+    public async Task<ArtDetail> DeleteArtDetail(int artDetailId)
     {
       var result = await _AppDbContext.ArtDetail.FirstOrDefaultAsync(e => e.ID == artDetailId);
-      if (result != null)
-      {
-        _AppDbContext.ArtDetail.Remove(result);
-        await _AppDbContext.SaveChangesAsync();
-      }
+      if (result == null)
+        return null;
+
+      _AppDbContext.ArtDetail.Remove(result);
+
+      await _AppDbContext.SaveChangesAsync();
+      return result;
     }
   }
 }

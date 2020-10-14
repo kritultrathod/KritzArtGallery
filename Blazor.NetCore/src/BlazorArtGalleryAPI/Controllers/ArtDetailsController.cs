@@ -110,6 +110,25 @@ namespace BlazorArtGalleryAPI.Controllers
       }
     }
 
+    [HttpDelete("{id:int}")]
+    public async Task<ActionResult<ArtDetail>> DeleteArtDetail(int id)
+    {
+      try
+      {
+        var artDetailToDelete = await _ArtDetailRepository.GetArtDetail(id);
+        if (artDetailToDelete == null)
+          return NotFound($@"Art Detail with id {id} not found");
+
+        return await _ArtDetailRepository.DeleteArtDetail(id);
+
+      }
+      catch (Exception e)
+      {
+        LogException(e);
+        return StatusCode(StatusCodes.Status500InternalServerError, $@"Error deleting art with id {id}");
+      }
+    }
+
     private static void LogException(Exception e)
     {
       if (e != null)

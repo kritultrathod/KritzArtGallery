@@ -13,6 +13,6 @@ namespace BlazorArtGalleryAPI.Models
     Task<ArtDetail> GetArtDetailByTitle(string title);
     Task<ArtDetail> AddArtDetail(ArtDetail artDetail);
     Task<ArtDetail> UpdateArtDetail(ArtDetail artDetail);
-    void DeleteArtDetail(int artDetailId);
+    Task<ArtDetail> DeleteArtDetail(int artDetailId);
   }
 }
