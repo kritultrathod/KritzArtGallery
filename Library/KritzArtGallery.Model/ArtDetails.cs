@@ -2,7 +2,7 @@
 
 namespace KritzArtGallery.Model
 {
-  public class ArtDetails
+  public class ArtDetail
   {
     public Int32 ID { get; set; }
     public string Title { get; set; }
@@ -15,7 +15,7 @@ namespace KritzArtGallery.Model
     public bool Private { get; set; }
     public bool Available { get; set; }
     public bool SendAFriend { get; set; }
-    public string ImageSmall { get; set; }
-    public string ImageLarge { get; set; }
+    public string SmallImageUrl { get; set; }
+    public string LargeImageUrl { get; set; }
   }
 }

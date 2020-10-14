@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using BlazorArtGallery.Pages;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Hosting;
@@ -27,8 +28,7 @@ namespace BlazorArtGallery
     {
       services.AddRazorPages();
       services.AddServerSideBlazor();
-      //TODO: add my component here
-      //services.AddSingleton<WeatherForecastService>();
+      services.AddSingleton<ArtGalleryList>();
     }
 
     // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -15,4 +15,8 @@
     <ProjectReference Include="..\..\..\Library\KritzArtGallery.Model\KritzArtGallery.Model.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\images\small-images\" />
+  </ItemGroup>
+
 </Project>
