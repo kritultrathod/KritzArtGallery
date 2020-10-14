@@ -7,7 +7,7 @@ namespace BlazorArtGalleryAPI.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "Employees",
+                name: "ArtDetail",
                 columns: table => new
                 {
                     ID = table.Column<int>(nullable: false)
@@ -23,11 +23,11 @@ namespace BlazorArtGalleryAPI.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Employees", x => x.ID);
+                    table.PrimaryKey("PK_ArtDetail", x => x.ID);
                 });
 
             migrationBuilder.InsertData(
-                table: "Employees",
+                table: "ArtDetail",
                 columns: new[] { "ID", "ArtistName", "Available", "Description", "LargeImageUrl", "Private", "SendAFriend", "SmallImageUrl", "Title" },
                 values: new object[,]
                 {
@@ -45,7 +45,7 @@ namespace BlazorArtGalleryAPI.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "Employees");
+                name: "ArtDetail");
         }
     }
 }

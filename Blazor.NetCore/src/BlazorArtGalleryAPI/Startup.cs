@@ -27,6 +27,9 @@ namespace BlazorArtGalleryAPI
     // This method gets called by the runtime. Use this method to add services to the container.
     public void ConfigureServices(IServiceCollection services)
     {
+      //TODO: API is not working while using Docker for debugging
+      Console.WriteLine(Configuration.GetConnectionString("DBConnection"));
+
       services.AddDbContext<AppDbContext>(options =>
         options.UseSqlServer(Configuration.GetConnectionString("DBConnection")));
 

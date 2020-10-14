@@ -51,7 +51,7 @@ namespace BlazorArtGalleryAPI.Migrations
 
                     b.HasKey("ID");
 
-                    b.ToTable("Employees");
+                    b.ToTable("ArtDetail");
 
                     b.HasData(
                         new

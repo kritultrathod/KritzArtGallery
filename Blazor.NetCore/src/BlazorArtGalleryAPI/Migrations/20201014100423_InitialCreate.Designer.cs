@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BlazorArtGalleryAPI.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20201014072344_InitialCreate")]
+    [Migration("20201014100423_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -53,7 +53,7 @@ namespace BlazorArtGalleryAPI.Migrations
 
                     b.HasKey("ID");
 
-                    b.ToTable("Employees");
+                    b.ToTable("ArtDetail");
 
                     b.HasData(
                         new
