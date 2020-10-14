@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using BlazorArtGallery.Pages;
+using BlazorArtGallery.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Hosting;
@@ -28,7 +29,12 @@ namespace BlazorArtGallery
     {
       services.AddRazorPages();
       services.AddServerSideBlazor();
-      services.AddSingleton<ArtGalleryList>();
+      services.AddHttpClient<IArtDetailService, ArtDetailService>(client =>
+      {
+        client.BaseAddress = new Uri("https://localhost:44327/");
+      });
+
+      services.AddSingleton<ArtGalleryList>(); //TODO: is this required any more
     }
 
     // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
