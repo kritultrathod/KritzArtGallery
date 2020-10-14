@@ -10,7 +10,7 @@ namespace BlazorArtGalleryAPI.Models
 {
   public class AppDbContext : DbContext
   {
-    public DbSet<ArtDetail> Employees { get; set; }
+    public DbSet<ArtDetail> ArtDetail { get; set; }
 
     public AppDbContext(DbContextOptions<AppDbContext> options)
       : base(options)
