@@ -34,6 +34,27 @@ namespace BlazorArtGalleryAPI.Controllers
       }
     }
 
+    [Route("{search}")]
+    public async Task<ActionResult> Search(string title, string artistName)
+    {
+      try
+      {
+        var results = await _ArtDetailRepository.Search(title, artistName);
+
+        if (results.Any())
+        {
+          return Ok(results);
+        }
+
+        return NotFound();
+      }
+      catch (Exception e)
+      {
+        LogException(e);
+        return StatusCode(StatusCodes.Status500InternalServerError, $@"Error retrieving Art Detail for Title {title} and Artist Name {artistName} from database");
+      }
+    }
+
     [HttpGet("{id:int}")]
     public async Task<ActionResult<ArtDetail>> GetArtDetail(int id)
     {

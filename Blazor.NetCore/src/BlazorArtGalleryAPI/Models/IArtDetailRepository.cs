@@ -9,6 +9,7 @@ namespace BlazorArtGalleryAPI.Models
   public interface IArtDetailRepository
   {
     Task<IEnumerable<ArtDetail>> GetArtDetails();
+    Task<IEnumerable<ArtDetail>> Search(string title, string artistName);
     Task<ArtDetail> GetArtDetail(int artDetailId);
     Task<ArtDetail> GetArtDetailByTitle(string title);
     Task<ArtDetail> AddArtDetail(ArtDetail artDetail);

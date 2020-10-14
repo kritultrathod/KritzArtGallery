@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Threading.Tasks;
 using BlazorArtGallery.Model;
 using Microsoft.EntityFrameworkCore;
@@ -19,6 +20,23 @@ namespace BlazorArtGalleryAPI.Models
     public async Task<IEnumerable<ArtDetail>> GetArtDetails()
     {
       return await _AppDbContext.ArtDetail.ToListAsync();
+    }
+
+    public async Task<IEnumerable<ArtDetail>> Search(string title, string artistName)
+    {
+      IQueryable<ArtDetail> query = _AppDbContext.ArtDetail;
+
+      if (!string.IsNullOrEmpty(title))
+      {
+        query = query.Where(x => x.Title.Contains(title));
+      }
+
+      if (!string.IsNullOrEmpty(artistName))
+      {
+        query = query.Where(x => x.ArtistName.Contains(artistName));
+      }
+      
+      return await query.ToListAsync();
     }
 
     public async Task<ArtDetail> GetArtDetail(int artDetailId)
