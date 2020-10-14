@@ -30,6 +30,8 @@ namespace BlazorArtGalleryAPI
       services.AddDbContext<AppDbContext>(options =>
         options.UseSqlServer(Configuration.GetConnectionString("DBConnection")));
 
+      services.AddScoped<IArtDetailRepository, ArtDetailRepository>();
+
       services.AddControllers();
     }
 
