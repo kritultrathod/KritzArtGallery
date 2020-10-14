@@ -57,6 +57,7 @@ namespace BlazorArtGalleryAPI.Controllers
 
     public async Task<ActionResult<ArtDetail>> AddArtDetail(ArtDetail artDetail)
     {
+      //TODO: add model validation before proceeding 
       try
       {
         if (artDetail == null)
@@ -64,13 +65,48 @@ namespace BlazorArtGalleryAPI.Controllers
           return BadRequest();
         }
 
+        // TODO: make it idempotent (Created or retrieved)
+        var result = await _ArtDetailRepository.GetArtDetailByTitle(artDetail.Title);
+        if (result != null)
+        {
+          ModelState.AddModelError("Title", $@"Artifact with title {artDetail.Title} is already present");
+          return BadRequest(ModelState);
+        }
+
         var createdArtDetail = await _ArtDetailRepository.AddArtDetail(artDetail);
-        return CreatedAtAction(nameof(GetArtDetail), new { id = createdArtDetail .ID}, createdArtDetail);
+        return CreatedAtAction(nameof(GetArtDetail), new { id = createdArtDetail.ID }, createdArtDetail);
       }
       catch (Exception e)
       {
         Console.WriteLine(e);
-        throw;
+        return StatusCode(StatusCodes.Status500InternalServerError, $@"Error creating Art Detail with Title {artDetail.Title}.");
+      }
+    }
+
+    [HttpPut("{id:int}")]
+    public async Task<ActionResult<ArtDetail>> UpdateArtDetail(int id, ArtDetail artDetail)
+    {
+      try
+      {
+        if (id != artDetail.ID)
+        {
+          return BadRequest("Art Detail ID mismatch");
+        }
+
+        var result = await _ArtDetailRepository.GetArtDetail(id);
+
+        if (result == null)
+        {
+          return NotFound();
+        }
+
+        return await _ArtDetailRepository.UpdateArtDetail(artDetail);
+
+      }
+      catch (Exception e)
+      {
+        LogException(e);
+        return StatusCode(StatusCodes.Status500InternalServerError, $@"Error updating Art Detail for id {id} into database");
       }
     }
 

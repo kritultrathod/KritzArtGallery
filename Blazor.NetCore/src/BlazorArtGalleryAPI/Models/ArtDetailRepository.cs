@@ -26,6 +26,11 @@ namespace BlazorArtGalleryAPI.Models
       return await _AppDbContext.ArtDetail.FirstOrDefaultAsync(e => e.ID == artDetailId);
     }
 
+    public async Task<ArtDetail> GetArtDetailByTitle(string title)
+    {
+      return await _AppDbContext.ArtDetail.FirstOrDefaultAsync(e => e.Title == title);
+    }
+
     public async Task<ArtDetail> AddArtDetail(ArtDetail artDetail)
     {
       var result = await _AppDbContext.ArtDetail.AddAsync(artDetail);
