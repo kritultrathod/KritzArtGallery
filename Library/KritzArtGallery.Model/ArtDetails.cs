@@ -9,8 +9,8 @@ namespace BlazorArtGallery.Model
     public string ArtistName { get; set; }
     public string Description { get; set; }
 
-    public Dimension ArtDimensions { get; set; }
-    public Price ArtPrice { get; set; }
+    //public Dimension ArtDimensions { get; set; }
+    //public Price ArtPrice { get; set; }Dimension
 
     public bool Private { get; set; }
     public bool Available { get; set; }

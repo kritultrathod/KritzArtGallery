@@ -1,29 +1,25 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Security.AccessControl;
-using System.Threading;
 using System.Threading.Tasks;
 using BlazorArtGallery.Model;
-using Microsoft.AspNetCore.Components;
+using Microsoft.AspNetCore.Mvc.ApiExplorer;
+using Microsoft.EntityFrameworkCore;
 
-namespace BlazorArtGallery.Component
+namespace BlazorArtGalleryAPI.Models
 {
-  public class ArtGalleryListBase : ComponentBase
+  public class AppDbContext : DbContext
   {
-    public IEnumerable<ArtDetail> ArtDetails { get; set; }
+    public DbSet<ArtDetail> Employees { get; set; }
 
-    protected override async Task OnInitializedAsync()
+    public AppDbContext(DbContextOptions<AppDbContext> options)
+      : base(options)
     {
-      await Task.Run(LoadEmployees);
-      //return base.OnInitializedAsync();
     }
 
-    #region Service Call
-    private void LoadEmployees()
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-      Thread.Sleep(3000);
-      List<ArtDetail> artDetails = new List<ArtDetail>();
+      base.OnModelCreating(modelBuilder);
 
       modelBuilder.Entity<ArtDetail>().HasData(new ArtDetail()
       {
@@ -217,9 +213,6 @@ namespace BlazorArtGallery.Component
         SmallImageUrl = @"images/small-images/Rock_On_Stencil_by_spookyjthm777.jpg",
         LargeImageUrl = @"images/big-images/Rock_On_Stencil_by_spookyjthm777.jpg"
       });
-
-      ArtDetails = artDetails;
     }
-    #endregion
   }
 }
