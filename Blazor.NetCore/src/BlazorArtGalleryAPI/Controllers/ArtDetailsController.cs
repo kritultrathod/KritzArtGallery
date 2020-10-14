@@ -55,6 +55,25 @@ namespace BlazorArtGalleryAPI.Controllers
       }
     }
 
+    public async Task<ActionResult<ArtDetail>> AddArtDetail(ArtDetail artDetail)
+    {
+      try
+      {
+        if (artDetail == null)
+        {
+          return BadRequest();
+        }
+
+        var createdArtDetail = await _ArtDetailRepository.AddArtDetail(artDetail);
+        return CreatedAtAction(nameof(GetArtDetail), new { id = createdArtDetail .ID}, createdArtDetail);
+      }
+      catch (Exception e)
+      {
+        Console.WriteLine(e);
+        throw;
+      }
+    }
+
     private static void LogException(Exception e)
     {
       if (e != null)
