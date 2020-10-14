@@ -34,7 +34,7 @@ namespace BlazorArtGalleryAPI.Controllers
       }
     }
 
-    [HttpGet("{id}")]
+    [HttpGet("{id:int}")]
     public async Task<ActionResult<ArtDetail>> GetArtDetail(int id)
     {
       try
