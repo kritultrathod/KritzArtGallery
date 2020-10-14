@@ -25,7 +25,7 @@ namespace BlazorArtGallery.Component
       Thread.Sleep(3000);
       List<ArtDetail> artDetails = new List<ArtDetail>();
 
-      modelBuilder.Entity<ArtDetail>().HasData(new ArtDetail()
+      artDetails.Add(new ArtDetail()
       {
         ID = 1,
         Title = "Love Is the Devil",
@@ -49,7 +49,7 @@ namespace BlazorArtGallery.Component
         SmallImageUrl = @"images/small-images/Rock_On_Stencil_by_spookyjthm777.jpg",
         LargeImageUrl = @"images/big-images/Rock_On_Stencil_by_spookyjthm777.jpg"
       });
-      modelBuilder.Entity<ArtDetail>().HasData(new ArtDetail()
+      artDetails.Add(new ArtDetail()
       {
         ID = 2,
         Title = "Way We Laughed, The (Così Ridevano)",
@@ -73,7 +73,7 @@ namespace BlazorArtGallery.Component
         SmallImageUrl = @"images/small-images/Rock_On_Stencil_by_spookyjthm777.jpg",
         LargeImageUrl = @"images/big-images/Rock_On_Stencil_by_spookyjthm777.jpg"
       });
-      modelBuilder.Entity<ArtDetail>().HasData(new ArtDetail()
+      artDetails.Add(new ArtDetail()
       {
         ID = 3,
         Title = "Undertaker and His Pals",
@@ -97,7 +97,7 @@ namespace BlazorArtGallery.Component
         SmallImageUrl = @"images/small-images/Rock_On_Stencil_by_spookyjthm777.jpg",
         LargeImageUrl = @"images/big-images/Rock_On_Stencil_by_spookyjthm777.jpg"
       });
-      modelBuilder.Entity<ArtDetail>().HasData(new ArtDetail()
+      artDetails.Add(new ArtDetail()
       {
         ID = 4,
         Title = "Being Elmo: A Puppeteer's Journey",
@@ -121,7 +121,7 @@ namespace BlazorArtGallery.Component
         SmallImageUrl = @"images/small-images/Rock_On_Stencil_by_spookyjthm777.jpg",
         LargeImageUrl = @"images/big-images/Rock_On_Stencil_by_spookyjthm777.jpg"
       });
-      modelBuilder.Entity<ArtDetail>().HasData(new ArtDetail()
+      artDetails.Add(new ArtDetail()
       {
         ID = 5,
         Title = "Love Is the Devil",
@@ -145,7 +145,7 @@ namespace BlazorArtGallery.Component
         SmallImageUrl = @"images/small-images/Rock_On_Stencil_by_spookyjthm777.jpg",
         LargeImageUrl = @"images/big-images/Rock_On_Stencil_by_spookyjthm777.jpg"
       });
-      modelBuilder.Entity<ArtDetail>().HasData(new ArtDetail()
+      artDetails.Add(new ArtDetail()
       {
         ID = 6,
         Title = "Way We Laughed, The (Così Ridevano)",
@@ -169,7 +169,7 @@ namespace BlazorArtGallery.Component
         SmallImageUrl = @"images/small-images/Rock_On_Stencil_by_spookyjthm777.jpg",
         LargeImageUrl = @"images/big-images/Rock_On_Stencil_by_spookyjthm777.jpg"
       });
-      modelBuilder.Entity<ArtDetail>().HasData(new ArtDetail()
+      artDetails.Add(new ArtDetail()
       {
         ID = 7,
         Title = "Undertaker and His Pals",
@@ -193,7 +193,7 @@ namespace BlazorArtGallery.Component
         SmallImageUrl = @"images/small-images/Rock_On_Stencil_by_spookyjthm777.jpg",
         LargeImageUrl = @"images/big-images/Rock_On_Stencil_by_spookyjthm777.jpg"
       });
-      modelBuilder.Entity<ArtDetail>().HasData(new ArtDetail()
+      artDetails.Add(new ArtDetail()
       {
         ID = 8,
         Title = "Being Elmo: A Puppeteer's Journey",
