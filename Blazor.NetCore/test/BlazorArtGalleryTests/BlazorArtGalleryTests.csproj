@@ -14,7 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\Library\KritzArtGallery.Model\KritzArtGallery.Model.csproj" />
+    <ProjectReference Include="..\..\..\Library\KritzArtGallery.Model\BlazorArtGallery.Model.csproj" />
     <ProjectReference Include="..\..\src\BlazorArtGallery\BlazorArtGallery.csproj" />
   </ItemGroup>
 

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Security.AccessControl;
 using System.Threading;
 using System.Threading.Tasks;
-using KritzArtGallery.Model;
+using BlazorArtGallery.Model;
 using Microsoft.AspNetCore.Components;
 
 namespace BlazorArtGallery.Component

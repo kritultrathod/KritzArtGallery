@@ -12,7 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\Library\KritzArtGallery.Model\KritzArtGallery.Model.csproj" />
+    <ProjectReference Include="..\..\..\Library\KritzArtGallery.Model\BlazorArtGallery.Model.csproj" />
   </ItemGroup>
 
   <ItemGroup>

@@ -1,4 +1,4 @@
-﻿namespace KritzArtGallery.Model
+﻿namespace BlazorArtGallery.Model
 {
   public enum MeasureUnit
   {

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace KritzArtGallery.Model
+namespace BlazorArtGallery.Model
 {
   public class ArtDetail
   {
