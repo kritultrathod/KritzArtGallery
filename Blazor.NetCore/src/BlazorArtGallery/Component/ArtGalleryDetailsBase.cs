@@ -21,6 +21,7 @@ namespace BlazorArtGallery.Component
 
     protected override async Task OnInitializedAsync()
     {
+      Id = Id ?? "1";
       ArtDetail = await ArtDetailService.GetArtDetails(int.Parse(Id));
     }
   }

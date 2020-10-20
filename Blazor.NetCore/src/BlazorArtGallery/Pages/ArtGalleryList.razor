@@ -20,9 +20,13 @@ else
         </div>
 
         <div class="card-body text-center">
-          <a href="@artDetail.LargeImageUrl">
-            <img class="card-img-top" src="@artDetail.SmallImageUrl" />
-          </a>
+          @*TODO: note navigation 1 - Anchor link
+            <a href="@artDetail.LargeImageUrl">
+            TODO: note navigation 2 - Event Handler*@
+
+          <img class="card-img-top" src="@artDetail.SmallImageUrl" @onclick="@(e => Mouse_Down(e, artDetail.ID))" />
+
+          @*</a>*@
         </div>
 
         <div class="card-footer text-sm-center">
