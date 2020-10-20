@@ -9,5 +9,6 @@ namespace BlazorArtGallery.Services
   public interface IArtDetailService
   {
     Task<IEnumerable<ArtDetail>> GetArtDetails();
+    Task<ArtDetail> GetArtDetails(int Id);
   }
 }
