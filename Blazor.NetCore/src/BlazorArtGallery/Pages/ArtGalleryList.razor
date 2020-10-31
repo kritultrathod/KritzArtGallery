@@ -1,15 +1,18 @@
 ﻿@page "/"
 
+@using System.Diagnostics
 @inherits ArtGalleryListBase
 
 <h3>Art Gallery List</h3>
 
 @if (ArtDetails == null)
 {
+  Debug.WriteLine($@"KTR:ArtDetails is null block");
   <div class="spinner"></div>
 }
 else
 {
+  Debug.WriteLine($@"KTR:ArtDetails else block");
   <div class="row justify-content-center">
     <img class="card-deck ">
     @foreach (var artDetail in ArtDetails)
