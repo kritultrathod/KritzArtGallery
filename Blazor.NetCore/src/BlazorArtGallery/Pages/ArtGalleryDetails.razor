@@ -4,28 +4,34 @@
 @inherits ArtGalleryDetailsBase
 
 <h3>Art Gallery Details</h3>
+@if (ArtDetail == null || string.IsNullOrEmpty(ArtDetail.Title))
+{
+  <div class="spinner"></div>
+}
+else
+{
+  <div class="row justify-content-center m-3">
+    <div class="col-sm-8">
+      <div class="card">
+        <div class="card-header">
+          <h1>@ArtDetail.Title</h1>
+        </div>
 
-<div class="row justify-content-center m-3">
-  <div class="col-sm-8">
-    <div class="card">
-      <div class="card-header">
-        <h1>@ArtDetail.Title</h1>
-      </div>
+        <div class="card-body text-center">
+          <img class="card-img-top" src="@ArtDetail.LargeImageUrl" />
+          <h4>Title: @ArtDetail.Title</h4>
+          <h4>Description: @ArtDetail.Description</h4>
+        </div>
 
-      <div class="card-body text-center">
-        <img class="card-img-top" src="@ArtDetail.LargeImageUrl" />
-        <h4>Title: @ArtDetail.Title</h4>
-        <h4>Description: @ArtDetail.Description</h4>
-      </div>
-
-      <div class="card-footer text-center">
-        <a href="/" class="btn btn-primary">Back</a>
-        <a href="#" class="btn btn-primary">Edit</a>
-        <a href="#" class="btn btn-danger">Delete</a>
+        <div class="card-footer text-center">
+          <a href="/" class="btn btn-primary">Back</a>
+          <a href="#" class="btn btn-primary">Edit</a>
+          <a href="#" class="btn btn-danger">Delete</a>
+        </div>
       </div>
     </div>
   </div>
-</div>
+}
 
 @code {
 

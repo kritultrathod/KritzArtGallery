@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using BlazorArtGallery.Model;
 using BlazorArtGalleryAPI.Models;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -34,6 +35,10 @@ namespace BlazorArtGalleryAPI
         options.UseSqlServer(Configuration.GetConnectionString("DBConnection")));
 
       services.AddScoped<IArtDetailRepository, ArtDetailRepository>();
+      services.AddScoped<IUserRepository, UserRepository>();
+
+      var jwtSection = Configuration.GetSection("JWTSettings");
+      services.Configure<JWTSettings>(jwtSection);
 
       services.AddControllers();
     }

@@ -25,6 +25,7 @@ namespace BlazorArtGallery.Services
 
     public async Task<ArtDetail> GetArtDetails(int Id)
     {
+      await Task.Delay(1000);
       return await _HttpClient.GetJsonAsync<ArtDetail>($"api/ArtDetails/{Id}");
     }
   }
